@@ -18,7 +18,7 @@ import json
 from collections import Counter
 
 # external modules
-from subbrute import subbrute
+from Sublist3r.subbrute import subbrute
 import dns.resolver
 import requests
 
@@ -111,8 +111,8 @@ def write_file(filename, subdomains):
     print("%s[-] Saving results to file: %s%s%s%s" % (Y, W, R, filename, W))
     with open(str(filename), 'wt') as f:
         for subdomain in subdomains:
-            f.write(subdomain + os.linesep)
-
+            #f.write(subdomain + os.linesep)
+            f.write(subdomain + '\n')
 
 def subdomain_sorting_key(hostname):
     """Sorting key for subdomains
